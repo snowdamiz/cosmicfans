@@ -1,15 +1,18 @@
 import * as eva from '@eva-design/eva';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
-import { ApplicationProvider, Text } from '@ui-kitten/components';
+import { StyleSheet } from 'react-native';
+import { ApplicationProvider, Text, Layout } from '@ui-kitten/components';
 
 export default function App() {
   return (
-    <ApplicationProvider {...eva} theme={eva.light}>
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <StatusBar style="auto" />
-      </View>
+    <ApplicationProvider {...eva} theme={eva.dark}>
+      <Layout style={styles.container}>
+        <StatusBar style="light" />
+
+        <Layout style={styles.layout} level='4'>
+          <Text>Layout level 4</Text>
+        </Layout>
+      </Layout>
     </ApplicationProvider>
   );
 }
@@ -17,8 +20,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+    flexDirection: 'column',
+  },
+
+  layout: {
+    flex: 1,
     justifyContent: 'center',
+    alignItems: 'center',
   },
 });
