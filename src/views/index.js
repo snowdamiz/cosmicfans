@@ -1,0 +1,1 @@
+export { default as V_Home } from './v.home'
