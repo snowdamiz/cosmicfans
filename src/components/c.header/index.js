@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     width: '100%',
     marginTop: 25,
+    paddingHorizontal: 20,
   },
 
   logo: {
