@@ -1,18 +1,22 @@
-import { StyleSheet, View  } from 'react-native';
+import { StyleSheet, View  } from 'react-native'
 import { Button, Icon } from '@ui-kitten/components'
 
+const FeedIcon     = (props) => <Icon {...props} style={styles.icon} fill='#8F9BB3' name='activity-outline'/>
+const CreatorsIcon = (props) => <Icon {...props} style={styles.icon} fill='#8F9BB3' name='people-outline'/>
+const MessagesIcon = (props) => <Icon {...props} style={styles.icon} fill='#8F9BB3' name='message-circle-outline'/>
+const ProfileIcon  = (props) => <Icon {...props} style={styles.icon} fill='#8F9BB3' name='person-outline'/>
+const SettingsIcon = (props) => <Icon {...props} style={styles.icon} fill='#8F9BB3' name='settings-outline'/>
 
 export default function cNav () {
   return (
     <View style={styles.container}>
-      <Icon style={styles.icon} fill='#8F9BB3' name='activity-outline' />
-      <Icon style={styles.icon} fill='#8F9BB3' name='people-outline'/>
-      <Icon style={styles.icon} fill='#8F9BB3' name='message-circle-outline'/>
-      {/* <Icon style={styles.icon} fill='#8F9BB3' name='person-outline'/> */}
-      <Icon style={styles.icon} fill='#8F9BB3' name='settings-outline'/>
-      {/* <Button appearance='ghost' /> */}
+      <Button style={styles.button} appearance='ghost' accessoryLeft={FeedIcon}/>
+      <Button style={styles.button} appearance='ghost' accessoryLeft={CreatorsIcon}/>
+      <Button style={styles.button} appearance='ghost' accessoryLeft={MessagesIcon}/>
+      <Button style={styles.button} appearance='ghost' accessoryLeft={ProfileIcon}/>
+      <Button style={styles.button} appearance='ghost' accessoryLeft={SettingsIcon}/>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -22,12 +26,20 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: '#000',
     alignItems: 'center',
-    paddingBottom: 30,
-    paddingTop: 14,
+    paddingBottom: 18,
+    paddingTop: 4,
+  },
+
+  btnStyles: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 
   icon: {
-    width: 26,
-    height: 26,
-  }
-});
+    border: 1,
+    borderColor: '#ffffff',
+    width: 20,
+    height: 20
+  },
+})
