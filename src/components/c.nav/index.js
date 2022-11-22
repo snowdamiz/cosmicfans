@@ -1,11 +1,11 @@
 import { StyleSheet, View  } from 'react-native'
 import { Button, Icon } from '@ui-kitten/components'
 
-const FeedIcon     = (props) => <Icon {...props} style={styles.icon} fill='#8F9BB3' name='activity-outline'/>
-const CreatorsIcon = (props) => <Icon {...props} style={styles.icon} fill='#8F9BB3' name='people-outline'/>
-const MessagesIcon = (props) => <Icon {...props} style={styles.icon} fill='#8F9BB3' name='message-circle-outline'/>
-const ProfileIcon  = (props) => <Icon {...props} style={styles.icon} fill='#8F9BB3' name='person-outline'/>
-const SettingsIcon = (props) => <Icon {...props} style={styles.icon} fill='#8F9BB3' name='settings-outline'/>
+const FeedIcon     = (props) => <Icon {...props} style={styles.icon} fill='#C9D1D9' name='activity-outline'/>
+const CreatorsIcon = (props) => <Icon {...props} style={styles.icon} fill='#C9D1D9' name='people-outline'/>
+const MessagesIcon = (props) => <Icon {...props} style={styles.icon} fill='#C9D1D9' name='message-circle-outline'/>
+const ProfileIcon  = (props) => <Icon {...props} style={styles.icon} fill='#C9D1D9' name='person-outline'/>
+const SettingsIcon = (props) => <Icon {...props} style={styles.icon} fill='#C9D1D9' name='settings-outline'/>
 
 export default function cNav () {
   return (
